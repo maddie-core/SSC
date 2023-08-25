@@ -1,0 +1,13 @@
+**/cmake_install.cmake
+**/Makefile
+**/CMakeCache.txt
+**/CMakeFiles
+*.exe
+*.o
+
+build.bat
+*.swp
+
+out
+CMakeSettings.json
+.vs
