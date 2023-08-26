@@ -12,6 +12,7 @@
 #define SSC_OUTSTREAM_H
 
 #include <utility> // std::forward
+#include <string>
 #include <tuple>
 
 #include "core_types.h"
@@ -38,7 +39,10 @@ public:
         write_buffer(&c, 1);
     }
     void write(bool b);
-    
+    inline void write(const std::string& s) {
+        write(s.c_str());
+    }
+
       // Writing pointers
     template<typename T>
     inline void write(T* ptr) {
