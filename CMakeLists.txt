@@ -8,6 +8,6 @@ set (CMAKE_CXX_STANDARD ${PROJECT_CXX_STANDARD})
 
 project (ssc)
 
-add_executable (ssc "main.cpp" "outstream.h" "outstream.cpp" "characters.h" "fmt.h" "fmt.cpp" "sys.h" "sys.cpp")
+add_executable (ssc "main.cpp" "outstream.h" "outstream.cpp" "characters.h" "fmt.h" "fmt.cpp" "sys.h" "sys.cpp" "mem.h" "mem.cpp")
 
 target_compile_definitions (ssc PUBLIC PROJECT_SOURCE_PATH=\"${PROJECT_SOURCE_DIR}\")

@@ -2,14 +2,13 @@
 
 #include <cstring>   // for strlen
 #include <algorithm>
-#include <assert.h>
 
 void ssc::OutStream::write(const char* buf) {
     write_buffer(buf, strlen(buf));
 }
 
 void ssc::OutStream::write(u64 v, ulen radix, bool lowercase, bool separators) {
-    assert(radix>=2 && radix<=36 && "invalid radix");
+    DBG_ASSERT(radix>=2 && radix<=36, "invalid radix");
     if (!v) {
         write_buffer("0", 1);
         return;
